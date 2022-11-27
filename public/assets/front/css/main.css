@@ -1,0 +1,373 @@
+body {
+	min-width: 320px;
+	/* background-color: gray	; */
+	/* background: #23EC55;
+background: -webkit-radial-gradient(top right, #23EC55, #2D51C1);
+background: -moz-radial-gradient(top right, #23EC55, #2D51C1);
+background: radial-gradient(to bottom left, #23EC55, #2D51C1); */
+font-family: 'Roboto Condensed', sans-serif;
+margin: 0px;
+}
+
+.icon {
+	width: 36px;
+}
+/* Product */
+img {
+	max-width: 100%;
+	height: auto;
+}
+.carousel-image {
+	height: 750;
+}
+/* .navbar-dark .navbar-nav .nav-link{
+	color: black;
+} */
+.nav-bar-main {
+	justify-content: center;
+}
+/* .button-main{
+	color: black;
+} */
+.button-main:hover{
+	background-color: rgb(225, 0, 255);
+	border-color: rgb(225, 0, 255);
+}
+/* .button-main{
+	color: white;
+} */
+.a {
+	color: black;
+}
+.product-cards {
+	/* display: flex; */
+	flex-wrap: wrap;
+}
+
+.product-card {
+	/* border: 1px solid #ddd; */
+	transition: all .5s;
+	padding: 10px 20px;
+	position: relative;
+	float: left;
+	width: 300px;
+	/* height: 370px; */
+	word-wrap: break-word;
+}
+
+.product-card:hover {
+    /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.397); */
+    /*transform: translateY(-5px);*/
+}
+.product-cart-botton {
+ 	background-color: gray ;
+	border-color: gray;
+}
+.btn-info:hover {
+	background-color:  rgb(71, 172, 71);
+	border-color: rgb(71, 172, 71);;
+}
+.offer {
+	color: #fff;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 10;
+	text-transform: uppercase;
+}
+
+.offer > div {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 3px;
+	font-size: 14px;
+}
+
+.offer-hit {
+	background-color: #ff8400;
+}
+
+.offer-sale {
+	background-color: #007bff;
+}
+
+.card-thumb {
+	height: 150px;
+	text-align: center;
+}
+
+.card-thumb img {
+	max-height: 150px;
+}
+
+.card-caption {
+	margin-top: 20px;
+}
+
+.card-title {
+	height: 55px;
+  text-align: center;
+	overflow: hidden;
+}
+
+.card-title a {
+	color: #354751;
+}
+
+.card-price {
+	font-size: 16px;
+	color: #ec4835;
+}
+
+.card-price del, .product-buy del {
+	color: #337ab7;
+}
+
+.product-card .item-status {
+	position: absolute;
+	bottom: 5px;
+}
+
+.cart-modal img .cart-table img {
+	max-height: 50px;
+}
+
+.product-item-thumb {
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.product-item-thumb img {
+	max-height: 500px;
+}
+
+.del-item {
+	cursor: pointer;
+}
+
+/* .btn-cart-product {
+	color: white
+	background-color: rgb(216, 57, 57);
+	border-color:  rgb(216, 57, 57);;
+} */
+
+@media only screen and (max-width : 734px) {
+	.product-cards{
+		justify-content: center;
+	}
+}
+
+
+
+style
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+	font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*****************
+    - Card Product  -
+*****************/
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #6f7270;
+    border-color: #6f7270;
+    border-radius: 100px;
+  }
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+}
+
+body {
+    background-color: #F1F2F3;
+}
+
+.container-fluid,
+.container {
+    max-width: 1200px;
+}
+
+.card-container {
+    padding: 100px 0px;
+    -webkit-perspective: 1000;
+    perspective: 1000;	
+}
+
+
+
+.profile-card-2 {
+    max-width: 300px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-card-2 img {
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-name {
+    position: absolute;
+    left: 30px;
+    bottom: 70px;
+    font-size: 30px;
+    color: #FFF;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #FFF;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-username {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: #FFF;
+    font-size: 13px;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons .fa {
+    margin: 5px;
+}
+
+.profile-card-2:hover img {
+    filter: grayscale(100%);
+}
+
+.profile-card-2:hover .profile-name {
+    bottom: 80px;
+}
+
+.profile-card-2:hover .profile-username {
+    bottom: 60px;
+}
+
+.profile-card-2:hover .profile-icons {
+    right: 40px;
+}
+
+
+
+/*Overlay Card Product */
+
+.hover-effect-btn {
+  position: relative;
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 324;
+  background: rgba(0, 0, 0, 0.1); /* Настройка цвета и прозрачности для блока с заголовком */
+  transition: background 0.5s ease;
+}
+.hover-effect-btn:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.9); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+}
+.hover-effect-btn:hover .title {
+  top: 10%; /* Отступ сверху при наведении */
+}
+.button {
+  position: absolute;
+  width: 100%;
+  left:0;
+  top: 40%; /* Отступ сверху */
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.button a {
+  padding: 15px 40px; /* Отступ */
+  text-align: center;
+  background: #ff921e; /* Цвет кнопки */
+  color: white; /* Цвет текста */
+  border: 1px solid rgb(255, 0, 0); /* Ширина, стиль и цвет границы */
+  z-index: 1; 
+}
+button.btn.btn-card-buy.btn-block.cart-addtocart {
+  background-color: #72ebe3;
+}
+
+.hover-effect-btn:hover .button {
+  opacity: 1;
+}
+     
+
+
+/* Admin  */
+.pagonation-admin{
+  justify-content: center;
+}
