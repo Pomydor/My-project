@@ -17,12 +17,13 @@
             </div>                        
             <div class="ms-3" style="margin-top: 130px;">
   
-
+ 
     <p>Name: <b>{{Auth::user()->name}}</b></p>
     <p>Email: <b>{{Auth::user()->email}}</b></p>
-    <p>Дата создания аккаунта: <b>{{Auth::user()->created_at}}</b></p>
+   
 
     @if(Auth::user()->is_admin)<b style="color: plum"> АДМИН </b>@endif
+
     @if(Auth::user()->is_admin == 0 ?? is_admin == 1)<b style="color: red"> ГОСТЬ </b>@endif
     <br>
     
@@ -34,7 +35,7 @@
                                @endif
 </div>
 
-
+     
             </div>
           </div>
           <div class="p-4 text-black" style="background-color: #f8f9fa;">
@@ -57,35 +58,11 @@
             <div class="mb-5">
               <p class="lead fw-normal mb-1">About</p>
               <div class="p-4" style="background-color: #f8f9fa;">
-                <p class="font-italic mb-1">Web Developer</p>
+              <p style="color: red">Дата создания аккаунта: <b>{{Auth::user()->created_at}}</b></p>
                 <p class="font-italic mb-1">Lives in New York</p>
                 <p class="font-italic mb-0">Photographer</p>
               </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <p class="lead fw-normal mb-0">Recent photos</p>
-              <a  class="iuy" href="{{route('home')}}">Назад</a>   
-              <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
-            </div>
-            <div class="row g-2">
-              <div class="col mb-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
-                  alt="image 1" class="w-100 rounded-3">
-              </div>
-              <div class="col mb-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
-                  alt="image 1" class="w-100 rounded-3">
-              </div>
-            </div>
-            <div class="row g-2">
-              <div class="col">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
-                  alt="image 1" class="w-100 rounded-3">
-              </div>
-              <div class="col">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
-                  alt="image 1" class="w-100 rounded-3">
-              </div>
             </div>
           </div>
         </div>

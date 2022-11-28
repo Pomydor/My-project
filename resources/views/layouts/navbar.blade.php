@@ -1,14 +1,21 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
-<nav class="navbar navbar-expand-lg navbar-white   sticky-top" style="background-color: white opacity 1 ;">
+<nav class="navbar navbar-expand-lg navbar-white   sticky-top" style="background-color: white ;">
 <button  type="button" class="btn btn-outline-default"  ><a class="navbar-brand" href="{{route('home')}}" style="color: black"  >Shop</a></button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse nav-bar-main navbar-collapse" id="navbarColor01">
+ 
         <ul class="navbar-nav mr-right">
             <li class="nav-item active">
                 <button   href="{{ route('home') }}" type="button" class="btn  nav-link button-main rounded-pill" href="index.html">Главная <span class="sr-only">(current)</span></button>
+            </li>
+            <li>
+            <form method="get" action="{{ route('products.serach') }}" class="form-inline align-self-end">
+            <input class="form-control mr-sm-2" type="search" name="s" placeholder="Search" value="{{ isset($s) ? $s : null }}">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form> 
             </li>
             <!-- @foreach($categories as $category)
             <li class="nav-item">
@@ -20,7 +27,9 @@
                     Корзина <span class="badge badge-black mini-cart-gty"> {{ session('cart_gty') ?? 0 }} </span> 
                 </button>
             </li>
+            
         </ul>
+        
         @if(Auth::check() && Auth::user()->is_admin = 2)
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -30,14 +39,14 @@
         </div>
     </div>
     @endif
-        <button class="btn btn--header" onclick="showCart ( '{{route( 'cart.game' ) }}' )"  data-modal="menu" bis_skin_checked="1">Каталог игр</button>
+       
 
       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
       <i class="fa-solid fa-bars"></i>
 </button>
 
 
-    <div class="row-cols-sm-2">
+    <!-- <div class="row-cols-sm-2"> -->
             <!-- @if($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -89,31 +98,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-<!-- Modal
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div> -->

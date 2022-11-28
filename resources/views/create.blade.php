@@ -5,37 +5,39 @@
 @section('content')
 
 <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
-    @csrf
-    <div class="row mb-4 ">
+@csrf   
+<H1 class="row justify-content-center">Добавить товар на страницу </H1>
+
+  <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+        
         <div class="col">
-            <div class="form-outline">  
-                <input type="text" id="title" name="title" placeholder="Название" class="form-control" />
+            <div class="form-outline">
+               
+                <input type="text" id="title" placeholder="Название" name="title" class="form-control" />
 
-            </div>
-        </div>
-    </div>
-
-    <div class="mb-3">
-        <div class="form-outline">
+        
+              <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form-outline flex-fill mb-0">
             <label class="form-label" for="slug" >Описание</label>
-            <textarea class="form-control" name="slug" id="slug" cols="30" rows="10"></textarea>
+            <textarea class="form-control" placeholder="..." name="slug" id="slug" cols="30" rows="10"></textarea>
             <div id="errorDescription" class="text-danger"></div>
         </div>
     </div>
 
-    <div class="mb-3">
-        <div class="form-outline">
-            <label class="form-label" for="content" >Контент</label>
-            <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
+    <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form-outline flex-fill mb-0">
+            <label class="form-label" for="content">Контент</label>
+            <textarea class="form-control" placeholder="..." name="content" id="content" cols="30" rows="10"></textarea>
             <div id="errorDescription" class="text-danger"></div>
         </div>
     </div>
 
-    <div class="mb-3">
-        <div class="form-outline">
-            <label class="form-label" for="category" placeholder="Категории">Категория</label>
-            <select name="category" id="category" class="form-select">
-                <option value="">Выберите категорию</option>
+    <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form-outline flex-fill mb-0">
+                <select name="category" id="category" class="form-select">
+                <option value="" placeholder="Категории">жанр игр</option>
                 @foreach($categories as $category)
                     <option value="{{$category->id}}">{{$category->title}}</option>
                 @endforeach
@@ -44,16 +46,16 @@
         </div>
     </div>
 
-<div class="mb-3">
-    <label for="user" class="form-label"></label>
+    <div class="form-outline flex-fill mb-0">   
+            <label for="user" class="form-label"></label>
     <input type="hidden" id="user" name="user" placeholder="" class="form-control" value="{{auth()->user()->id}}">
     <div id="errorUser" class="text-danger"></div>
-    <div class="mb-3">
+    <div class="form-outline flex-fill mb-0">
         <label class="form-label" for="image">Фотография</label>
         <input class="form-control" name="image" id="img" type="file">
         <div id="errorImage" class="text-danger"></div>
     </div>
-    <div class="row mb-4 ">
+    <div class="form-outline flex-fill mb-0">
         <div class="col">
             <div class="form-outline">
                 <label class="form-label" for="price">Цена</label>
@@ -63,10 +65,11 @@
         </div>
     </div>
 
-    <div class="mb-3 text-end">
-        <button id="btnAddPost" type="submit" class="text-black btn btn-outline-warning">Отправить</button>
+    <div class="d-flex justify-content-center"  style="margin-top: 20px;">
+                  <button id="btnAddPost" type="submit" class=" btn btn btn-primary">Отправить</button>
+                  </div>
     </div>
-    </div>
+</div>
 
 </form>
 <br>
