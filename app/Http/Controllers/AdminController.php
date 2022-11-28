@@ -55,6 +55,13 @@ class AdminController extends Controller
         ]);
         return redirect()->back();
     }
+    public function changeDlc(Product $product) {
+        $product->updateOrFail([
+            'dlc' => !$product->dlc
+        ]);
+        return redirect()->back();
+    }
+
 
     public function changeRole(User $user)
     {

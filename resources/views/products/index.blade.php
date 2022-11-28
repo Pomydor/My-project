@@ -66,6 +66,9 @@
                 @if($product->sale)
                 <div class="offer-sale">Sale</div>
                 @endif
+                @if($product->sale)
+                <div class="offer-dlc">Dlc</div>
+                @endif
             </div>
 
             <form action="{{route('cart.add')}}" method="post" class="addtocart">

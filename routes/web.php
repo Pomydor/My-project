@@ -51,6 +51,7 @@ Route::group(['Middleware' => 'guest'], function () {
         Route::get('/post/accept', [AdminController::class, 'acceptPost' ])->name('admin.post.accept');
         Route::get('/post/{product}/hit', [AdminController::class, 'changeHit'])->name('admin.post.changeHit');
         Route::get('/post/{product}/sale', [AdminController::class, 'changeSale'])->name('admin.post.changeSale');
+        Route::get('/post/{product}/dlc', [AdminController::class, 'changeHit'])->name('admin.post.changeDlc');
         Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'category'])->name('category');
         Route::post('/category', [\App\Http\Controllers\CategoryController::class, 'storee'])->name('storee');
         Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');

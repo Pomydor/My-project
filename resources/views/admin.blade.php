@@ -47,6 +47,9 @@
                 <a class="btn btn-primary" href="{{ route('admin.post.changeSale', ['product' => $product]) }}">
                     {{$product->sale ? 'Убрать из скидок' : 'Добавить в скидки'}}
                 </a>
+                <a class="btn btn-primary" href="{{ route('admin.post.changeDlc', ['product' => $product]) }}">
+                    {{$product->dlc ? 'Убрать из Длс' : 'Добавить в Длс'}}
+                </a>
             </div>
         </div>
         @endforeach
