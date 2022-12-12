@@ -59,12 +59,12 @@
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Меню</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <div>
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+      Это меню  
     </div>
    @guest
     <button type="button" class="btn  btn-primary" ><a class="dropdown-item" href="{{route('login.create')}}">Login</a></button>
@@ -80,13 +80,11 @@
 
     
     <div class="dropdown mt-3">
-      <button  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Other
-      </button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="{{route('profile')}}">Profile</a></li>
         <li><a class="dropdown-item" href="{{route('home')}}">Main</a></li>
       </ul>
     </div>
   </div>
+  
 </div>

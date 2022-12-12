@@ -17,6 +17,9 @@
                 @if($product->sale)
                 <div class="offer-sale">Sale</div>
                 @endif
+                @if($product->dlc)
+                <div class="offer-sale">Dlc</div>
+                @endif
             </div>
             <div class="card-thumb">
                 <a href="{{route('products.show',['slug'=>$product->slug])}}">

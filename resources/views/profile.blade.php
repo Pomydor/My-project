@@ -51,7 +51,7 @@
                                <a  class="text-black " style="text-decoration: none" href="{{url('create')}}">Добавить Товар</a>
                                     <a href="{{url('create')}}" class="float btn " style="text-decoration: none"></a>@endif
     @if(Auth::user()->is_admin)
-                                  <br> <a  class="text-black " style="text-decoration: none" href="{{url('admin')}}">Админ</a>    <br>
+                                  <br> <a  class="text-black " style="text-decoration: none" href="{{url('admin')}}">Панель Админа</a>    <br>
                                <a href="{{route('admin.users-table')}}" class="text-black " style="text-decoration: none">Пользователи</a>    <br>
          <a href="{{route('admin.orders-table')}}" class="text-black" style="text-decoration: none">Заказы</a>
          <p style="color: red">Дата создания аккаунта: <b>{{Auth::user()->created_at}}</b></p>
