@@ -22,8 +22,7 @@
     <p>Email: <b>{{Auth::user()->email}}</b></p>
    
 
-    @if(Auth::user()->is_admin)<b style="color: plum"> АДМИН </b>@endif
-
+    @if(Auth::user()->is_admin == 2  )<b style="color: plum"> АДМИН </b>@endif
     @if(Auth::user()->is_admin == 0 ?? is_admin == 1)<b style="color: red"> ГОСТЬ </b>@endif
     <br>
     

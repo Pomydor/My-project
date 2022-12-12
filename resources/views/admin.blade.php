@@ -37,8 +37,8 @@
                
             </p> 
             <p class="m-0">
-                <a href="{{route('admin.post.accept', ['id'=>$product->id])}}" class="btn btn-primary btn-sm">Yes</a>
-                <a href="{{route('admin.post.cancel', ['id'=>$product->id])}}" class="btn btn-danger btn-sm">No</a>
+                <a href="{{route('admin.post.accept', ['id'=>$product->id])}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-check"></i></a>
+                <a href="{{route('admin.post.cancel', ['id'=>$product->id])}}" class="btn btn-danger btn-sm"><i class="fa-solid fa-xmark"></i></a>
             </p>
             <div class="mt-2 d-flex flex-wrap gap-2">
                 <a class="btn btn-primary" href="{{ route('admin.post.changeHit', ['product' => $product]) }}">

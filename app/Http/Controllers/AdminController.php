@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $title = 'Товары';
+        $title = 'Product';
         $products = Product::query()->paginate(10);
         return view('admin', compact('products', 'title'));
     }

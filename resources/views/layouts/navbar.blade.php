@@ -30,15 +30,7 @@
             
         </ul>
         
-        @if(Auth::check() && Auth::user()->is_admin = 2)
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin')}}">Панель Админа</a>
-                    </li> 
-                </ul>
-        </div>
-    </div>
-    @endif
+ 
        
 
       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
