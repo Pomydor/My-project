@@ -10,9 +10,7 @@
             <th scope="col">ID</th>
             <th scope="col">Сумма</th>
             <th scope="col">Количество товаров</th>
-            <th scope="col">Телефон</th>
             <th scope="col">Почта</th>
-            <th scope="col">Адрес</th>
             <th scope="col">Комментарий</th>
             <th scope="col">Создан</th>
             <th scope="col">Действия</th>
@@ -24,9 +22,7 @@
                <th scope="row">{{ $order->id }}</th>
                <td>{{ $order->total }} рублей</td>
                <td>{{ $order->gty }}</td>
-               <td>{{ $order->phone }}</td>
                <td>{{ $order->email }}</td>
-               <td>{{ $order->address }}</td>
                <td>{{ $order->note }}</td>
                <td>{{ $order->created_at }}</td>
                <td>

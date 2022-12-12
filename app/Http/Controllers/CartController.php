@@ -48,10 +48,7 @@ public function checkout (Request $request)
 {
   if ($request->method() == 'POST') {
     $request->validate([
-      'name' => 'required',
       'email' => 'required',
-      'phone' => 'required',
-      'address' => 'required',
     ]);
     $data = $request->all();
 
