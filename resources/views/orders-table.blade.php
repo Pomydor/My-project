@@ -1,6 +1,6 @@
 @extends('admin-layout')
 
-@section('title', 'KVINTO')
+
 
 @section('content')
 <div class="container mt-5">

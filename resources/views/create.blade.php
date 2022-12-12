@@ -4,7 +4,7 @@
 
 @section('content')
 
-<form action="{{route('store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('store')}}" method="post" enctype="multipart/form-data" style="background-color: white">
 @csrf   
 <H1 class="row justify-content-center">Добавить товар на страницу </H1>
 

@@ -14,30 +14,13 @@
                 style="z-index: 1;">
                 Edit profile
               </button>
-            </div>                        
+            </div>
             <div class="ms-3" style="margin-top: 130px;">
-  
- 
-    <p>Name: <b>{{Auth::user()->name}}</b></p>
-    <p>Email: <b>{{Auth::user()->email}}</b></p>
-   
-
-    @if(Auth::user()->is_admin == 2  )<b style="color: plum"> АДМИН </b>@endif
-    @if(Auth::user()->is_admin == 0 ?? is_admin == 1)<b style="color: red"> ГОСТЬ </b>@endif
-    <br>
-    
-    @if(Auth::user()->is_admin)
-                               <a  class="iuy" href="{{url('create')}}">Добавить Товар</a>    <a href="{{url('create')}}" class="float btn " style="text-decoration: none"></a>@endif
-    <p></p>
-    @if(Auth::user()->is_admin)
-                               <a  class="iuy" href="{{url('admin')}}">Админ</a>    <a href="{{url('admin')}}" class="float btn " style="text-decoration: none"> </a>
-                               @endif
-</div>
-
-     
+              <h5> <p>Name: <b>{{Auth::user()->name}}</b></p> </h5>
+              <p>Email: <b>{{Auth::user()->email}}</b></p>
             </div>
           </div>
-          <div class="p-4 text-black" style="background-color: #f8f9fa;">
+          <div class="p-4 text-black" style="background-color: #f6f6f6;;">
             <div class="d-flex justify-content-end text-center py-1">
               <div>
                 <p class="mb-1 h5">253</p>
@@ -55,18 +38,54 @@
           </div>
           <div class="card-body p-4 text-black">
             <div class="mb-5">
-              <p class="lead fw-normal mb-1">About</p>
-              <div class="p-4" style="background-color: #f8f9fa;">
-              <p style="color: red">Дата создания аккаунта: <b>{{Auth::user()->created_at}}</b></p>
-                <p class="font-italic mb-1">Lives in New York</p>
-                <p class="font-italic mb-0">Photographer</p>
+              <p class="lead fw-normal mb-1">Доступ</p>
+              <div class="p-4" style="background-color: #f6f6f6;">
+             
+    
+   
+
+    @if(Auth::user()->is_admin == 2  )<b style="color: plum"> АДМИН </b>@endif
+    @if(Auth::user()->is_admin == 0  )<b style="color: red"> ГОСТЬ </b>@endif
+    <br>
+    
+    @if(Auth::user()->is_admin)
+                               <a  class="iuy" href="{{url('create')}}">Добавить Товар</a>    <a href="{{url('create')}}" class="float btn " style="text-decoration: none"></a>@endif
+    <p></p>
+    @if(Auth::user()->is_admin)
+                               <a  class="iuy" href="{{url('admin')}}">Админ</a>
+                               <a href="{{route('admin.users-table')}}" class="text-black " style="text-decoration: none">Пользователи</a>
+         <a href="{{route('admin.orders-table')}}" class="text-black" style="text-decoration: none">Заказы</a>
+         <p style="color: red">Дата создания аккаунта: <b>{{Auth::user()->created_at}}</b></p>
+                               @endif
               </div>
             </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="lead fw-normal mb-0">Recent photos</p>
+              <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
+            </div>
+            <div class="row g-2">
+              <div class="col mb-2">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                  alt="image 1" class="w-100 rounded-3">
+              </div>
+              <div class="col mb-2">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
+                  alt="image 1" class="w-100 rounded-3">
+              </div>
+            </div>
+            <div class="row g-2">
+              <div class="col">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
+                  alt="image 1" class="w-100 rounded-3">
+              </div>
+              <div class="col">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
+                  alt="image 1" class="w-100 rounded-3">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
- 
 </section>

@@ -18,22 +18,14 @@
 <header>
     <div class="navbar shadow-sm">
         <div class="container">
-
             <a href="/public" class="navbar-brand d-flex align-items-center">
                 <img src = "/img/bf.png" alt="" style="width: 15%; height: 15%">
                 <strong class="text-black" style="text-decoration: none">Home</strong>
             </a>
-
-
             <a href="#">
-
                 <img src="{"
                      alt="" height="40px">
-
             </a>
-
-
-
             @guest
             <a href="#" class="text-black btn btn-outline-warning" style="text-decoration: none" > О на нас </a>
 <a href="{{ url('register') }}" class="text-black btn btn-outline-warning" style="text-decoration: none"> Регистрация </a>

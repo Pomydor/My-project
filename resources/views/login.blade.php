@@ -1,6 +1,5 @@
 @extends('layouts.layout')
 
-@section('title', 'Laravel Shop :: Home')
 
 @section('content')
 

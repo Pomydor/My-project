@@ -60,7 +60,7 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => $request->password,
         ])) {
-            if (Auth::user()->is_admin == 2) {
+            if (Auth::user()->is_admin) {
                 return redirect()->route('admin');
             } else {
                 return redirect()->route('profile');

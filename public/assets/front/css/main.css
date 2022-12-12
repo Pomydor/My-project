@@ -1,5 +1,6 @@
 body {
 	min-width: 320px;
+  
 	/* background-color: gray	; */
 	/* background: #23EC55;
 background: -webkit-radial-gradient(top right, #23EC55, #2D51C1);
@@ -16,9 +17,6 @@ margin: 0px;
 img {
 	max-width: 100%;
 	height: auto;
-}
-.carousel-image {
-	height: 750;
 }
 /* .navbar-dark .navbar-nav .nav-link{
 	color: black;
@@ -54,6 +52,8 @@ img {
 	/* height: 370px; */
 	word-wrap: break-word;
 }
+
+
 
 .product-card:hover {
     /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.397); */
@@ -236,7 +236,7 @@ a:focus {
 }
 
 body {
-    background-color: #F1F2F3;
+  background-color: white;
 }
 
 .container-fluid,

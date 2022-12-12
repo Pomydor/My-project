@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $title = 'Product';
+        $title = 'Товары';
         $products = Product::query()->paginate(10);
         return view('admin', compact('products', 'title'));
     }
@@ -61,7 +61,6 @@ class AdminController extends Controller
         ]);
         return redirect()->back();
     }
-
 
     public function changeRole(User $user)
     {

@@ -1,11 +1,11 @@
 @extends('admin-layout')
 
-@section('title', 'KVINTO')
-
 @section('content')
-<div class="container mt-5">
-   <h4>Заказ №{{ $order->id }}</h4>
+<div class="container mt-5"> 
+
+   <h5 style="text-align:center">Заказ №{{ $order->id }}</h5>
    <table class="table">
+     
       <thead>
          <tr>
             <th scope="col">ID</th>

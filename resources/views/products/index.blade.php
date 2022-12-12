@@ -66,8 +66,8 @@
                 @if($product->sale)
                 <div class="offer-sale">Sale</div>
                 @endif
-                @if($product->sale)
-                <div class="offer-dlc" style="background-color: #ac4acf;">Dlc</div>
+                @if($product->Dlc)
+                <div class="offer-dlc" style="background-color: #5a23e2;">Dlc</div>
                 @endif
             </div>
 

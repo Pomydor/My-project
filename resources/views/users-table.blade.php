@@ -1,10 +1,10 @@
-@extends('admin-layout')
+   @extends('admin-layout')
 
-@section('title', 'KVINTO')
 
 @section('content')
 <div class="container mt-5">
    <table class="table">
+      <h1 style="text-align:center">Пользователи</h1>
       <thead>
          <tr>
             <th scope="col">ID</th>
@@ -23,9 +23,9 @@
                <td>{{ $user->is_admin ? 'Администратор' : 'Пользователь' }}</td>
                <td>
                   @if($user->id != auth()->user()->id)
-                     <a class="btn btn-warning" href="{{ route('admin.user.change-role', ['user' => $user]) }}">{{ $user->is_admin ? 'Сделать пользователем' : 'Сделать админом' }}</a>
+                     <a class="btn btn-primary" href="{{ route('admin.user.change-role', ['user' => $user]) }}">{{ $user->is_admin ? 'Сделать пользователем' : 'Сделать админом' }}</a>
                      @else
-                     <a class="btn btn-secondary" disabled>Вы</a>
+                     <a class="btn btn-success" disabled>Вы</a>
                   @endif
                </td>
             </tr>
