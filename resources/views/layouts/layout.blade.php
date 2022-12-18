@@ -35,7 +35,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger btn-cart-product" data-bs-dismiss="modal">Закрыть</button>
-                <a href="{{route('cart.checkout')}}" class="btn btn-primary btn-cart   @if (empty(session(' cart ' ))) d-none @endif" >Оформить заказ</a>
+                <a href="{{route('cart.checkout')}}" class="btn btn-primary btn-cart   @if (empty(session(' cart ' ))) d-none @endif" >Оплата Заказа</a>
                 <button type="button" onclick="clearCart(' {{ route('cart.clear') }} ')" class="btn btn-danger btn-cart  @if (empty(session(' cart ' ))) d-none @endif" >Очистить корзину</button>
             </div>
         </div>

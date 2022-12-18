@@ -11,7 +11,6 @@
             <th scope="col">Сумма</th>
             <th scope="col">Количество товаров</th>
             <th scope="col">Почта</th>
-            <th scope="col">Комментарий</th>
             <th scope="col">Создан</th>
             <th scope="col">Действия</th>
          </tr>

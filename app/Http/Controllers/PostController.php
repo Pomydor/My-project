@@ -47,10 +47,11 @@ class PostController extends Controller
             ]);
     
             if ($request->hasFile('image')) {
-                $image = $request->file('image')->store('images');
+                $image = $request->file('image')->store('images' , 'public');
             }
-    
-    
+        
+                
+
             Product::create([
                 'title'=>$request->title,
                 'slug'=>$request->slug,

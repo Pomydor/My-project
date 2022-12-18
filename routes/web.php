@@ -33,6 +33,8 @@ Route::group(['Middleware' => 'guest'], function () {
           Route::delete('/', [PostController::class, 'post.delete'])->name('post.delete');
     });
     
+    Route::get ('/g' , [PostController::class,'create']);
+
     Route::group(['Middleware' => 'auth'],function (){
    
         Route::post('/post/delete/{id}', [PostController::class, 'post.delete']);

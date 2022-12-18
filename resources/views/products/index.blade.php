@@ -73,7 +73,8 @@
 
             <form action="{{route('cart.add')}}" method="post" class="addtocart">
                  @csrf 
-            <div class="profile-card-2"><div class="hover-effect-btn">
+            <div class="profile-card-2" style="">
+              <div class="hover-effect-btn">
               
                 <a href="{{route('products.show',['slug'=>$product->slug])}}"><img src="{{$product->getImage()}}" alt=""></a> 
                
@@ -87,7 +88,7 @@
                     <i class="fas fa-cart-arrow-down"></i> Купить
                 </button></div>
 </div> 
-            </div>
+</div>
             
                  @auth
                  
@@ -98,16 +99,11 @@
                     
                     {{$product->price}} руб.
                 </div>
-
-                
-              
                  <div class="input-group" >
                     <input type="hidden" class="form-control" name="gty" value="1">
                     <input type="hidden" name="product_id" value="{{$product->id}}">
                     <div class="input-group-append">
-                    </div>
-                    
- 
+                    </div>  
                  </div>
                  @endauth
                 </form>
@@ -122,7 +118,7 @@
 
 @endforeach
 
- 
+
 
 
     </div><!-- /product-cards -->
