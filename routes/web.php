@@ -6,6 +6,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\IzdatelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,9 +67,11 @@ Route::group(['Middleware' => 'guest'], function () {
     });
 
     Route::get('/politika', [AuthController::class, 'info'])->name('politika');
+    
 
 
 Route::get('/',[ProductController::class,'index'])->name('home');
+
 
 Route::get('/products/search', [ProductController::class, 'search'])->name('products.serach');
 Route::get('/product/{slug}',[ProductController::class,'show'])->name('products.show');
@@ -82,7 +85,8 @@ Route::post('/cart/add',[CartController::class,'add'])->name('cart.add');
 Route::get('/cart/del-item/{product_id}',[CartController::class, 'delItem'])->name('cart.del.item');
 Route::get('/cart/clear',[CartController::class,'clear'])->name('cart.clear');
 Route::get('/cart/show',[CartController::class,'show'])->name('cart.show');
- Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/catalog',[ProductController::class,'catalog'])->name('catalog');
 
 
 
@@ -92,7 +96,8 @@ Route::get('/cart/show',[CartController::class,'show'])->name('cart.show');
 
 
 
-//  Route::get('/', [\App\Http\Controllers\PostController::class, 'home'])->name('home');
+
+
 
 
 

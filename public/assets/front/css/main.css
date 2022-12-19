@@ -9,6 +9,28 @@ background: radial-gradient(to bottom left, #23EC55, #2D51C1); */
 font-family: 'Roboto Condensed', sans-serif;
 margin: 0px;
 }
+.offcanvas-backdrop {
+  background-color: #0000;
+}
+.bars{
+  --bs-btn-color: #fff;
+    --bs-btn-bg: #de7d78;
+    --bs-btn-border-color: #de7d78;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #de7d78;
+    --bs-btn-hover-border-color: #de7d78;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #de7d78;
+    --bs-btn-active-border-color: #de7d78;
+    --bs-btn-active-shadow: inset 0 3px 5pxrgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #de7d78;
+    --bs-btn-disabled-border-color: #de7d78;
+}
+.badge{
+  -bs-badge-color: #fa5661;
+}
 .logo {
   width: 20%;
   height: 20%;
@@ -27,54 +49,6 @@ margin: 0px;
 }
 
 
-/*    
-}   
- 
-}///
-
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Меню</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div>
-      Это меню  
-    </div>
-   @guest
-    <button type="button" class="btn  btn-primary" ><a class="dropdown-item" href="{{route('login.create')}}">Login</a></button>
-    <button type="button" class="btn  btn-primary" ><a class="dropdown-item" href="{{route('register.create')}}"><i class="fa-solid fa-user-pen"></i>Register</a></button>
-    @endguest
-    @auth
-          <a href="{{ url('profile') }}">
-            <i class="fa fa-user" aria-hidden="true"></i></a>
-        <!-- <i class="fa fa-sign-out" aria-hidden="true"></i></a> -->
-          <a href="{{ url('logout') }}">
-          <i class="fa-solid fa-door-closed icon" ></i></a>
-        @endauth
-
-    
-    <div class="dropdown mt-3">
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="{{route('profile')}}">Profile</a></li>
-        <li><a class="dropdown-item" href="{{route('home')}}">Main</a></li>
-      </ul>
-    </div>
-  </div>
-  
-</div>
-//// 
-
-
-       @if(session()->has('success'))
-                <div class="alert alert-success" style="margin-left: 640px;">
-                    {{session('success')}}
-                </div>
-            @endif
-        </div>
-    </div>
-</nav>
-*/
 .icon {
 	width: 36px;
 }
@@ -185,11 +159,11 @@ img {
 
 .card-price {
 	font-size: 16px;
-	color: #ec4835;
+	color: #000000;
 }
 
 .card-price del, .product-buy del {
-	color: #337ab7;
+	color: #72767c;
 }
 
 .product-card .item-status {
@@ -423,19 +397,32 @@ body {
   z-index: 1; 
 }
 button.btn.btn-card-buy.btn-block.cart-addtocart {
-  background-color: #72ebe3;
+  background-color: #de807a;
 }
 
 .hover-effect-btn:hover .button {
   opacity: 1;
 }
      
+/*Paginatio*/
 
+.pagination{
+  --bs-pagination-color: black;
+  --bs-pagination-hover-color: black;
+}
+
+.active>.page-link{
+  background-color: #de807a;
+  border-color: #dd8d83;  
+}
+
+.page-links {
+
+   color:black;
+}
 
 /* Admin  */
 .pagonation-admin{
   justify-content: center;
 }
-
-
 

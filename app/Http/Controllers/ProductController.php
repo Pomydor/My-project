@@ -6,8 +6,9 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
-{
+{   
     public function index(){
+      
         // записываем в сессию
         // session([
         //     'cart'=>[
@@ -76,7 +77,16 @@ class ProductController extends Controller
       $request->validate([
         's' => 'nullable'
       ]);
+      
+    
+ 
       $products = Product::query()->where('title', 'LIKE', "%$request->s%")->paginate(10);
       return view('categories.show', ['products' => $products, 's' => $request->s]);
+    }
+    
+
+    public function catalog()
+    {
+      return view('catalog'); 
     }
 }

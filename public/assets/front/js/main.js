@@ -62,7 +62,18 @@ function getCart(action){
   }
   });
 }
-
+function getCatalog(action){
+  $.ajax({
+  url:action,
+  type:'get',
+  success:function(result){
+  showCart(result);
+  },
+  error:function(){
+    alert('Error');
+  }
+  });
+}
 function clearCart(action) {
   $.ajax({
     url: action,

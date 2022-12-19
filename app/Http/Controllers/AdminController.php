@@ -68,9 +68,8 @@ class AdminController extends Controller
         if ($user->id == auth()->user()->id) {
             return redirect()->back();
         }
-
         $user->updateOrFail([
-            'is_admin' => ~$user->is_admin
+            'is_admin' => $user->is_admin
         ]);
         return redirect()->back();
     }

@@ -1,5 +1,5 @@
-   @extends('admin-layout')
-
+   
+@extends('layouts.layout')
 
 @section('content')
 <div class="container mt-5">
@@ -11,7 +11,7 @@
             <th scope="col">Имя</th>
             <th scope="col">Почта</th>
             <th scope="col">Роль</th>
-            <th scope="col">Действия</th>
+            <th scope="col">Функция</th>
          </tr>
       </thead>
       <tbody>

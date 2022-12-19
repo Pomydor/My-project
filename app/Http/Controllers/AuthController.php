@@ -13,10 +13,6 @@ class AuthController extends Controller
     {
         return view('register');
     }
-    public function info(){
-        return view('politika');
-    }
-
 
     public function store(Request $request)
     {

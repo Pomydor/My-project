@@ -22,6 +22,8 @@ class Product extends Model
         'sale',
         'status',
         'img',
+        'izdatel',
+        'razrab',
         'user_id',
     ];
 

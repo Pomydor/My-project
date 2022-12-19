@@ -21,7 +21,7 @@
         </div><!-- /row -->
     </div><!-- /container -->
 </div><!-- /wrapper -->
-
+@yield('cart')
 <!-- Modal -->
 <div class="modal fade cart-modal" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
