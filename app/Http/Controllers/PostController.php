@@ -22,6 +22,7 @@ class PostController extends Controller
     //       return view('welcome', compact('posts'));
     
         }
+        
     
         public function create(Request $request)
         {
@@ -38,18 +39,24 @@ class PostController extends Controller
         public function store(Request $request)
         {
             $this->validate($request,[
+             
                'title'=>'required',
                'slug'=>'required',
                 'content'=>'required',
                 'category'=>'required|exists:categories,id',
                 'price'=>'required',
                 'image'=>'nullable|image',
-            ]);
+                ]);
+             
+            
+            
     
             if ($request->hasFile('image')) {
                 $image = $request->file('image')->store('images' , 'public');
-            }
-        
+
+            } 
+            
+            
                 
 
             Product::create([

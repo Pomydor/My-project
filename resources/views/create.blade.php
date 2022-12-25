@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Laravel Shop :: Home')
+@section('title', 'Laravel Shop :: AddTovar')
 
 @section('content')
 
@@ -66,7 +66,7 @@
     </div>
 
     <div class="d-flex justify-content-center"  style="margin-top: 20px;">
-                  <button id="btnAddPost" type="submit" class=" btn btn btn-primary ">Отправить</button>
+                  <button id="btnAddPost" type="submit" class=" btn btn btn-primary btn-auth ">Отправить</button>
                   </div>
     </div>
 </div>
