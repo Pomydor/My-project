@@ -43,7 +43,7 @@
 
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                  <button id="btnAddPost" type="submit" class="text-black btn btn-primary">Отправить</button>
+                  <button id="btnAddPost" type="submit" class=" btn btn-auth btn-primary">Отправить</button>
                   </div>
 
 </div>

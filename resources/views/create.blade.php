@@ -66,7 +66,7 @@
     </div>
 
     <div class="d-flex justify-content-center"  style="margin-top: 20px;">
-                  <button id="btnAddPost" type="submit" class=" btn btn btn-primary">Отправить</button>
+                  <button id="btnAddPost" type="submit" class=" btn btn btn-primary ">Отправить</button>
                   </div>
     </div>
 </div>

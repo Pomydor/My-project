@@ -1,15 +1,17 @@
 @extends('layouts.layout')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
  <!-- Carousel  -->
- 
  
  <div id="myCarousel" class="vertical carousel slide" data-bs-ride="carousel" >
 
  
-  <div class="carousel-inner" >
-  <div class="carousel-item active " >
-    <img src="https://www.powergamingnetwork.com/wp-content/uploads/2021/08/rg.jpg" class="d-block w-100" alt="...">
+  <div class="carousel-inner  " >
+  <div class="carousel-item active  " >
+    <img src="https://www.powergamingnetwork.com/wp-content/uploads/2021/08/rg.jpg" class="d-block w-100 " alt="...">
     <div class="carousel-caption d-none d-md-block">
         <h1 class="Menu" >Resender Evil 4 предзаказ</h1>
         <h1 class="Menu">2999р.</h1>
@@ -51,7 +53,7 @@
 <div class="container">
 	<div class="row">
   <div class="col-md-4" style="display: contents;">
- 
+
 
 
   @yield('content')
@@ -67,7 +69,7 @@
                 <div class="offer-sale">Sale</div>
                 @endif
                 @if($product->dlc)
-                <div class="offer-dlc" style="background-color: #5a23e2;">Dlc</div>
+                <div class="offer-dlc">Dlc</div>
                 @endif
             </div>
 

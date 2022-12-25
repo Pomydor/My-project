@@ -22,19 +22,16 @@
               <p>Email: <b>{{Auth::user()->email}}</b></p>
             </div>
           </div>
-          <div class="p-4 text-black" style="background-color: #f6f6f6;;">
+          <div class="p-4 text-black" style="    height: 100px; background-color: #f6f6f6;">
             <div class="d-flex justify-content-end text-center py-1">
               <div>
-                <p class="mb-1 h5">253</p>
-                <p class="small text-muted mb-0">Photos</p>
+
               </div>
               <div class="px-3">
-                <p class="mb-1 h5">1026</p>
-                <p class="small text-muted mb-0">Followers</p>
+
               </div>
               <div>
-                <p class="mb-1 h5">478</p>
-                <p class="small text-muted mb-0">Following</p>
+
               </div>
             </div>
           </div>

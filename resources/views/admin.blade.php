@@ -41,13 +41,13 @@
                 <a href="{{route('admin.post.cancel', ['id'=>$product->id])}}" class="btn btn-danger btn-sm"><i class="fa-solid fa-xmark"></i></a>
             </p>
             <div class="mt-2 d-flex flex-wrap gap-2">
-                <a class="btn btn-primary" href="{{ route('admin.post.changeHit', ['product' => $product]) }}">
+                <a class="btn btn-primary offer-admin-hit" href="{{ route('admin.post.changeHit', ['product' => $product]) }}">
                     {{$product->hit ? 'Убрать из хитов' : 'Добавить в хиты'}}
                 </a>
-                <a class="btn btn-primary" href="{{ route('admin.post.changeSale', ['product' => $product]) }}">
+                <a class="btn btn-primary offer-admin-sale" href="{{ route('admin.post.changeSale', ['product' => $product]) }}">
                     {{$product->sale ? 'Убрать из скидок' : 'Добавить в скидки'}}
                 </a>
-                <a class="btn btn-primary" href="{{ route('admin.post.changeDlc', ['product' => $product]) }}">
+                <a class="btn btn-primary offer-admin-dlc" href="{{ route('admin.post.changeDlc', ['product' => $product]) }}">
                     {{$product->dlc ? 'Убрать из Длс' : 'Добавить в Длс'}}
                 </a>
             </div>

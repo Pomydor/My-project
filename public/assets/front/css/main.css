@@ -31,12 +31,7 @@ margin: 0px;
 .badge{
   -bs-badge-color: #fa5661;
 }
-.logo {
-  width: 20%;
-  height: 20%;
-  
-  
-}
+
 .navbar-panel
 {
   justify-content: flex-end;
@@ -47,8 +42,12 @@ margin: 0px;
   width: 500px;
     display: initial;
 }
+/* Cart Gty */
+.cart-gty-number{
+  --bs-badge-color: #ff6775;
+}
 
-
+/* /// */
 .icon {
 	width: 36px;
 }
@@ -93,6 +92,27 @@ img {
 }
 
 
+.btn-auth{
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #de7d78;
+  --bs-btn-border-color: #de7d78;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #834c49;
+  --bs-btn-hover-border-color: #834c49;
+  --bs-btn-focus-shadow-rgb: 49,132,253;  
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #de7d78;
+  --bs-btn-active-border-color: #de7d78;
+  --bs-btn-active-shadow: inset 0 3px 5px#dddddd57;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #de7d78;
+  --bs-btn-disabled-border-color: #de7d78;
+}
+
+/* ///// */
+
+
+/* ////// */
 
 .product-card:hover {
     /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.397); */
@@ -127,11 +147,16 @@ img {
 }
 
 .offer-hit {
-	background-color: #ff8400;
+  background-color: #f54015;
+  border-color: #f54015;
 }
+
 
 .offer-sale {
 	background-color: #007bff;
+}
+.offer-dlc {
+	background-color: #5a23e2;
 }
 
 .card-thumb {
@@ -425,4 +450,29 @@ button.btn.btn-card-buy.btn-block.cart-addtocart {
 .pagonation-admin{
   justify-content: center;
 }
+.offer-admin-hit{
+  background-color: #f54015;
+  border-color: #f54015;
+}
+.offer-admin-hit:hover{
+  background-color: #8f2b12;
+  border-color: #8f2b12;
+}
+.offer-admin-sale{
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.offer-admin-sale:hover{
+  background-color: #004c9c;
+  border-color: #004c9c;
+}
+.offer-admin-dlc{
+  background-color: #5a23e2;
+  border-color: #5a23e2;
+}
+.offer-admin-dlc:hover{
+  background-color: #3d1899;
+  border-color: #3d1899;
+}
+/* ///// */
 
