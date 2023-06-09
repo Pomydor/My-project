@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use http\Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -35,6 +37,7 @@ class Handler extends ExceptionHandler
         'password',
         'password_confirmation',
     ];
+
 
     /**
      * Register the exception handling callbacks for the application.

@@ -21,8 +21,6 @@ class AuthController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed',
         ]);
-        
-        
 
 
         $user = User::create([
@@ -34,8 +32,6 @@ class AuthController extends Controller
         session()->flash('success', 'Успешно зарегистрирован');
         Auth::login($user);
         return redirect()->home();
-
-
     }
 
 
@@ -59,11 +55,11 @@ class AuthController extends Controller
             if (Auth::user()->is_admin) {
                 return redirect()->route('admin');
             } else {
-                return redirect()->route('profile');
+                return redirect()->route('home');
             }
         }
 
-            return redirect()->back()->with('error', 'Неправильный Логин или Пароль');
+            return redirect()->back()->with('errors', 'Неправильный Логин или Пароль');
 
         }
 
@@ -80,7 +76,7 @@ class AuthController extends Controller
         Auth::logout();
         return redirect()->route('login.create');
     }
-  
+
 
 
 

@@ -1,61 +1,115 @@
-@extends('layouts.layout')
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Panel</title>
 
-<link rel="stylesheet" href="{{ asset('assets/front/css/main.css') }}">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('assets/front/fontawesome-free/css/all.min.css') }}">
 
 
-<div class="container justify-content-center">
-    <h2 class="my-4">{{ $title ?? 'Заявки' }}</h2>
-    <div class="row justify-content-center">
-        @if($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-        @if(session()->has('success'))
-        <div class="alert alert-success" style="margin-left: -180px">
-            {{session('success')}}
-        </div>
-        @endif
-        @foreach($products as $product)
-        <div class="col-3 d-flex flex-column m-3">
-            <a href="{{route('products.show',['slug'=>$product->slug])}}"><img class="img-cover" src="{{$product->getImage()}}" alt=""></a>
-            <h5 class="mt-2 mb-1">{{$product -> title}}</h5>
-            <p class="mb-1">{{$product -> price}} руб.</p>
-            <hr class="m-1">
-            <p>{{$product->updated_at}}</p>
-            <p class="fw-bold mb-1 mt-auto">Статус:
-                @if($product->status)
-                <span class="text-success">В наличии</span>
-                @else
-                <span class="text-danger">Нет в наличии</span>
-                @endif
-               
-            </p> 
-            <p class="m-0">
-                <a href="{{route('admin.post.accept', ['id'=>$product->id])}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-check"></i></a>
-                <a href="{{route('admin.post.cancel', ['id'=>$product->id])}}" class="btn btn-danger btn-sm"><i class="fa-solid fa-xmark"></i></a>
-            </p>
-            <div class="mt-2 d-flex flex-wrap gap-2">
-                <a class="btn btn-primary offer-admin-hit" href="{{ route('admin.post.changeHit', ['product' => $product]) }}">
-                    {{$product->hit ? 'Убрать из хитов' : 'Добавить в хиты'}}
-                </a>
-                <a class="btn btn-primary offer-admin-sale" href="{{ route('admin.post.changeSale', ['product' => $product]) }}">
-                    {{$product->sale ? 'Убрать из скидок' : 'Добавить в скидки'}}
-                </a>
-                <a class="btn btn-primary offer-admin-dlc" href="{{ route('admin.post.changeDlc', ['product' => $product]) }}">
-                    {{$product->dlc ? 'Убрать из Длс' : 'Добавить в Длс'}}
-                </a>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('assets/front/dist/css/adminlte.min.css') }}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="{{ asset('assets/front/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
+
+
+<!-- Гланый Контейнре Боковой панели -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: black">
+    <!-- Названия -->
+    <a href="{{route('home')}}" class="brand-link">
+        <span class="brand-text font-weight-light">На главную</span>
+    </a>
+    <a href="{{route('admin')}}" class="brand-link">
+        <span class="brand-text font-weight-light">Панель Админа</span>
+    </a>
+    <!-- Боковая панель -->
+    <div class="sidebar">
+
+        <!-- Имя Админа) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="info">
+                <p style="color: #bbbdbf">Name: <b>{{Auth::user()->name}}</b></p>
+
             </div>
+
         </div>
-        @endforeach
-    </div class="pagination-admin">
-    <nav class="container mb-3 ">
-        
-        {{ $products->links() }}
-    </nav>
-    @endsection
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="info">
+                <p class="lead fw-normal mb-1" style="color: #bbbdbf">Роль</p>
+
+
+                @if(Auth::user()->is_admin = 1  )
+                    <b style="color: #bbbdbf"> Администратор </b>
+                @endif
+                @if(Auth::user()->is_admin == 0  )
+                    <b style="color: #bbbdbf"> пользователь </b>
+                @endif
+                @if(Auth::user()->is_admin == -1  )
+                    <b style="color: #bbbdbf"> Модератор </b>
+                @endif
+
+            </div>
+
+        </div>
+
+        <!-- Боковая панель меню -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+                <li class="nav-item">
+                    <a href="{{route('create')}}" class="nav-link">
+                        <p>
+                            Добавить Товар
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('edit')}}" class="nav-link">
+                        <p>
+                            Изменение товара
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.orders-table')}}" class="nav-link">
+                        <p>
+                            Заказы
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.users-table')}}" class="nav-link">
+                        <p>
+                            Пользователи
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.content-wrapper -->
+
+
+        <!-- Control Sidebar -->
+
+
+        <!-- /.control-sidebar -->
+    </div>
+
+
+    <!-- ./wrapper -->
+
+
+    <script src="{{ asset('assets/front/jquery/jquery.min.js') }}"></script>
+
+
+    <script src="{{ asset('assets/front/jquery-ui/jquery-ui.min.js') }}"></script>
+
+</body>
+</html>

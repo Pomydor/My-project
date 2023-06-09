@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
@@ -11,9 +12,22 @@ class AdminController extends Controller
 {
     public function index()
     {
+
+        return view('admin');
+    }
+
+    public function edit()
+    {
+
         $title = 'Товары';
-        $products = Product::query()->paginate(10);
-        return view('admin', compact('products', 'title'));
+        $products = Product::query()->paginate(9);
+        return view('admin-edit', compact('products', 'title'));
+    }
+    public function editProduct(Product $product)
+    {
+        $categories = Category::all();
+        return view('edit', compact('product', 'categories'));
+
     }
 
     public function users()
@@ -34,7 +48,12 @@ class AdminController extends Controller
         $products = $order->products;
         return view('order-products', compact('order', 'products'));
     }
-
+    public function deleteProduct($id)
+    {
+        $products = Product::find($id);
+        $products->delete();
+        return redirect()->back();
+    }
     public function deleteOrder(Order $order)
     {
         $order->products()->delete();

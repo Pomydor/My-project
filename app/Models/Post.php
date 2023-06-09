@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'name',
         'description',
@@ -16,6 +16,7 @@ class Post extends Model
         'title',
         'img',
         'user_id',
+        'content',
     ];
 
     public function category()
